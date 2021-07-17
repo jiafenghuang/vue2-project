@@ -1,28 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <my-button @click="handleClick">testBtn</my-button>
+    <hr>
+    <my-input>testBtn</my-input>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MyUI from '../module2/my-ui'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods:{
+    handleClick(e){
+      console.log(`object`, e)
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
